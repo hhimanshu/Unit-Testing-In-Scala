@@ -1,4 +1,4 @@
-package main.scala.com.h2.entities
+package com.h2.entities
 
 object Email {
   def apply(value: String, domain: String): Email = new Email(value, domain)

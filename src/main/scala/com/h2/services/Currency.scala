@@ -1,6 +1,6 @@
-package main.scala.com.h2.services
+package com.h2.services
 
-import main.scala.com.h2.entities.Dollars
+import com.h2.entities.Dollars
 
 object Currency {
   // https://api.exchangeratesapi.io/latest?base=NZD

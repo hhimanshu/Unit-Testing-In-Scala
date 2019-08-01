@@ -1,8 +1,8 @@
-package main.scala.com.h2.entities
+package com.h2.entities
 
 import java.util.UUID
 
-import main.scala.com.h2.entities.Dollars.Zero
+import com.h2.entities.Dollars.Zero
 
 sealed trait TransactionType
 case object In extends TransactionType
@@ -18,7 +18,7 @@ case object LendingA extends AccountCategory
 abstract class Account {
   val id: UUID = UUID.randomUUID()
   val customer: Customer
-  val product: Product
+  val product: BankProduct
   val category: AccountCategory
   var transactions: Seq[Transaction] = Seq.empty
 

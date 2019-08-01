@@ -1,8 +1,8 @@
-package main.scala.com.h2.services
+package com.h2.services
 
 import java.util.UUID
 
-import main.scala.com.h2.entities.{DepositsAccount, Dollars, LendingAccount}
+import com.h2.entities.{DepositsAccount, Dollars, LendingAccount}
 
 trait AccountService extends AccountsDb
   with CustomerService

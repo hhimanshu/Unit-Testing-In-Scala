@@ -1,4 +1,4 @@
-package main.scala.com.h2.entities
+package com.h2.entities
 
 object Dollars {
   val Zero = new Dollars(0)

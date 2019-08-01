@@ -1,5 +1,6 @@
-import main.scala.com.h2.entities._
 import java.util.UUID
+
+import com.h2.entities.{Bank, BankProduct, DepositsP, Dollars, Email, LendingP}
 
 
 object BankOfScala {
@@ -19,7 +20,7 @@ object BankOfScala {
     println(s"Deposits Products Ids: $depositProductIds")
     println(s"LendingProductIds: $lendingProductIds")
 
-    def openAccounts(customerId: UUID, product: Product) = product.category match {
+    def openAccounts(customerId: UUID, product: BankProduct) = product.category match {
       case DepositsP => bank.openDepositAccount(customerId, product.id, _: Dollars)
       case LendingP => bank.openLendingAccount(customerId, product.id, _: Dollars)
     }
@@ -76,10 +77,14 @@ object BankOfScala {
     println("Statistics")
     println("-" * 100)
 
-    val dAccounts = depositAccountIds flatMap {bank.getDepositAccount}
+    val dAccounts = depositAccountIds flatMap {
+      bank.getDepositAccount
+    }
     println(s"Total Money Deposited to Bank: ${bank.getTotalMoneyDeposited(dAccounts)}")
 
-    val lAccounts = lendingAccountIds flatMap {bank.getLendingAccount}
+    val lAccounts = lendingAccountIds flatMap {
+      bank.getLendingAccount
+    }
     println(s"Total Money Borrowed by Customers: ${bank.getTotalMoneyBorrowedByCustomers(lAccounts)}")
 
     val allAccounts = dAccounts ++ lAccounts

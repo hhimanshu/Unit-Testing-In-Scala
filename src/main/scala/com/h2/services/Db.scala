@@ -1,8 +1,8 @@
-package main.scala.com.h2.services
+package com.h2.services
 
 import java.util.UUID
 
-import main.scala.com.h2.entities._
+import com.h2.entities._
 
 trait CustomerDb {
   private var customers: Map[UUID, Customer] = Map.empty

@@ -1,9 +1,9 @@
-package main.scala.com.h2.services
+package com.h2.services
 
 import java.time.LocalDate
 import java.util.UUID
 
-import main.scala.com.h2.entities.{Customer, Email}
+import com.h2.entities.{Customer, Email}
 
 trait CustomerService extends CustomerDb {
   /**
@@ -24,7 +24,7 @@ trait CustomerService extends CustomerDb {
     }
 
     def getDateOfBirth: LocalDate = {
-      val Array(year, month, day) = dateOfBirth.split("/")
+      val Array(year: String, month: String, day: String) = dateOfBirth.split("/")
       LocalDate.of(year.toInt, month.toInt, day.toInt)
     }
 

@@ -1,6 +1,6 @@
-package main.scala.com.h2.services
+package com.h2.services
 
-import main.scala.com.h2.entities._
+import com.h2.entities.{Account, AccountCategory, DepositsA, Dollars, LendingA}
 
 trait StatisticsService {
   def getTotalMoneyDeposited(accounts: Seq[Account]): Dollars = {
