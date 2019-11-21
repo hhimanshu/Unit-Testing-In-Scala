@@ -4,7 +4,7 @@ import java.util.UUID
 
 import com.h2.entities._
 
-trait CustomerDb {
+trait CustomersDb {
   private var customers: Map[UUID, Customer] = Map.empty
   def saveCustomer(customer: Customer): Unit = customers += (customer.id -> customer)
   def getCustomer(id: UUID): Option[Customer] = customers.get(id)

@@ -5,7 +5,7 @@ import java.util.UUID
 
 import com.h2.entities.{Customer, Email}
 
-trait CustomerService extends CustomerDb {
+trait CustomerService extends CustomersDb {
   /**
     * // todo: (challenge?) how to disallow customer with same details?
     *

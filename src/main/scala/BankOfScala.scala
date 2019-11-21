@@ -1,6 +1,7 @@
 import java.util.UUID
 
-import com.h2.entities.{Bank, BankProduct, DepositsP, Dollars, Email, LendingP}
+import com.h2.entities.{BankProduct, DepositsP, Dollars, Email, LendingP}
+import com.h2.services.Bank
 
 
 object BankOfScala {
