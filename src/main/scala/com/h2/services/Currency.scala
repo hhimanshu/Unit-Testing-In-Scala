@@ -2,6 +2,8 @@ package com.h2.services
 
 import com.h2.entities.Dollars
 
+import scala.language.implicitConversions
+
 object Currency {
   // https://api.exchangeratesapi.io/latest?base=NZD
   private val forexRates: Map[String, Double] = Map(

@@ -16,7 +16,7 @@ abstract class BankProduct {
 
 /* --------------------- Deposits Products -------------------- */
 abstract class Deposits extends BankProduct {
-  override val category = DepositsP
+  override val category: DepositsP.type = DepositsP
   val interestRatePerYear: Double
   val minimumBalancePerMonth: Dollars
 }
@@ -51,7 +51,7 @@ class RewardsSavings(val minimumBalancePerMonth: Dollars,
 
 /* --------------------- Lending Products -------------------- */
 abstract class Lending extends BankProduct {
-  override val category = LendingP
+  override val category: LendingP.type = LendingP
   val annualFee: Double
   val apr: Double
   val rewardsPercent: Double
