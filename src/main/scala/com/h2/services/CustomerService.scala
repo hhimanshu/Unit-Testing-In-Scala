@@ -18,17 +18,12 @@ trait CustomerService extends CustomersDb {
   def createNewCustomer(first: String, last: String,
                         email: String, dateOfBirth: String): UUID = {
 
-    def getEmail: Email = {
-      val Array(value, domain) = email.split("@")
-      Email(value, domain)
-    }
-
     def getDateOfBirth: LocalDate = {
       val Array(year: String, month: String, day: String) = dateOfBirth.split("/")
       LocalDate.of(year.toInt, month.toInt, day.toInt)
     }
 
-    val customer = new Customer(first, last, getEmail, getDateOfBirth)
+    val customer = new Customer(first, last, Email(email).toOption.head, getDateOfBirth)
     saveCustomer(customer)
     customer.id
   }
