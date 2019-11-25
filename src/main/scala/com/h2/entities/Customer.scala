@@ -12,6 +12,5 @@ class Customer(val first: String, val last: String,
 
 /** M2 - Example of customer creation exception because of invalid date */
 object Run extends App {
-  private val value = Email("jim@ben.com").toOption.get
-  val Jim = new Customer("Jim", "Ben", value, LocalDate.parse("a/b/c"))
+  val Jim = new Customer("Jim", "Ben", Email("jim@ben.com"), LocalDate.parse("a/b/c"))
 }

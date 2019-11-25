@@ -23,7 +23,7 @@ trait CustomerService extends CustomersDb {
       LocalDate.of(year.toInt, month.toInt, day.toInt)
     }
 
-    val customer = new Customer(first, last, Email(email).toOption.head, getDateOfBirth)
+    val customer = new Customer(first, last, Email(email), getDateOfBirth)
     saveCustomer(customer)
     customer.id
   }
