@@ -16,7 +16,7 @@ OpenJDK 64-Bit Server VM AdoptOpenJDK (build 13+33, mixed mode, sharing)
 sbt version in this project: 1.3.3
 sbt script version: 1.3.3
 ```
-- You must have [Scala 2.13](https://www.scala-lang.org/download/) or higher installed
+- You must have [Scala 2.13.1](https://www.scala-lang.org/download/) installed
 ```text
 ➜ scala --version
 Scala code runner version 2.13.1 -- Copyright 2002-2019, LAMP/EPFL and Lightbend, Inc.
