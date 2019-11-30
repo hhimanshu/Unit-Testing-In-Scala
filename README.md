@@ -23,8 +23,10 @@ Scala code runner version 2.13.1 -- Copyright 2002-2019, LAMP/EPFL and Lightbend
 ```
 
 ## How to run?
+- Create a fork of this repo. Follow [Github](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) documentation on how to achieve this.
+- Clone your forked repo.
 ```shell script
-git clone https://github.com/hhimanshu/Unit-Testing-In-Scala
+git clone https://github.com/<your-user-name>/Unit-Testing-In-Scala
 cd Unit-Testing-In-Scala
 ```
 
