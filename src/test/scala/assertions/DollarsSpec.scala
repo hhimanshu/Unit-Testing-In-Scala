@@ -64,7 +64,7 @@ class DollarsSpec extends AnyFlatSpec {
 //    val dollars: List[Dollars] = List(Dollars(1), Dollars(100), Dollars(20))
     val dollars: List[Dollars] = List.empty
 
-    assume(dollars.nonEmpty)
+    assume(dollars.nonEmpty, "The dollars coming from API should not be empty")
 
     dollars.foreach{ d =>
       assert(d.amount > 0)
