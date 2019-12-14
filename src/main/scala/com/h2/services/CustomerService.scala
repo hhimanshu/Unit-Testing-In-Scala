@@ -23,6 +23,9 @@ trait CustomerService extends CustomersDb {
       LocalDate.of(year.toInt, month.toInt, day.toInt)
     }
 
+    val existingCustomer: Option[Customer] = getExistingCustomer(email)
+    if(existingCustomer.isDefined) return existingCustomer.get.id
+
     val customer = new Customer(first, last, Email(email), getDateOfBirth)
     saveCustomer(customer)
     customer.id
