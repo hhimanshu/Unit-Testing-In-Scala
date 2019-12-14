@@ -11,6 +11,12 @@ class LogicalSpec extends UnitSpec {
     tenNzd.costInDollars.amount should (be > (0) and be <= (10))
   }
 
+  it should "successfully match logical expression with 'and' and 'not' condition for a currency" in {
+    val tenNzd: Currency = "10 NZD"
+
+    tenNzd.code should (have length (3) and not equal ("USD"))
+  }
+
   it should "successfully match logical expression with 'or' condition for a currency" in {
     val tenNzd: Currency = "10 NZD"
 

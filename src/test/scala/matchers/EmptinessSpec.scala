@@ -14,6 +14,8 @@ class EmptinessSpec extends UnitSpec {
 
     customer.last should be (empty)
     customer.last shouldBe empty
+
+    customerId.toString should not be (empty)
   }
 
   behavior of "Currencies inside wallet"
@@ -21,5 +23,11 @@ class EmptinessSpec extends UnitSpec {
     val wallet: List[Currency] = List.empty
 
     wallet should be (empty)
+  }
+
+  it should "not be empty when no currencies are added to wallet" in {
+    val wallet: List[Currency] = List("1 USD")
+
+    wallet should not be (empty)
   }
 }
