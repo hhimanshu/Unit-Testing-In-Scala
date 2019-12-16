@@ -1,0 +1,5 @@
+package fixtures
+
+class ScalaFixtureContextObjectSpec {
+
+}

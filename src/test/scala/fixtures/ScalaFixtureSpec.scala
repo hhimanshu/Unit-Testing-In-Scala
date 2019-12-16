@@ -4,9 +4,6 @@ import com.h2.entities.Dollars
 import com.h2.services.Currency
 import matchers.UnitSpec
 
-/**
- * Show by duplicate code and then refactoring into the fixture object
- */
 class ScalaFixtureSpec extends UnitSpec {
 
   def fixture = new {
