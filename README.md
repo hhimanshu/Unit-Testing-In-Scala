@@ -1,3 +1,5 @@
+# Ranjeet Code
+
 # Unit Testing in Scala
 This project uses `ScalaTest` to write all the unit tests in the course.
 
@@ -83,4 +85,3 @@ To run the test excluding a specific tag, run
 testOnly -- -l com.h2.tags.Fast
 testOnly -- -l com.h2.tags.Slow
 ```
-
