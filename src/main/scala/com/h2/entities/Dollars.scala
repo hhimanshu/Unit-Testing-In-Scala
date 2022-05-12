@@ -5,7 +5,7 @@ object Dollars {
   def apply(a: Int): Dollars = new Dollars(a)
 }
 
-class Dollars(val amount: Int) extends AnyVal with Ordered[Dollars] {
+class  Dollars(val amount: Int) extends AnyVal with Ordered[Dollars] {
   override def compare(that: Dollars): Int = amount - that.amount
 
   def +(dollars: Dollars): Dollars = new Dollars(amount + dollars.amount)
