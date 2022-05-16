@@ -4,6 +4,8 @@ import com.h2.services.Currency
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 
+// USING GREATER THAN
+
 class OrderingSpec extends AnyFlatSpec with Matchers {
 
   behavior of "Currency Conversion Cost in Comparison"
@@ -29,6 +31,7 @@ class OrderingSpec extends AnyFlatSpec with Matchers {
    oneUsd.costInDollars.amount should be < tenUsd.costInDollars.amount
   }
 
+  // Work lexicographically too
   it should "report NZD < USD" in {
     "NZD" should be < "USD"
   }

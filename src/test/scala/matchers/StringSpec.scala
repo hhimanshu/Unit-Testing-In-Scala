@@ -4,6 +4,9 @@ import com.h2.services.CustomerService
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 
+// BASIC STRING COMPARISONS 
+// note: the underlying .equals method is used
+
 class StringSpec extends AnyFlatSpec with Matchers{
 
   val customerService: CustomerService = new CustomerService {}

@@ -4,7 +4,11 @@ import com.h2.services.Currency
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 
-class EqualitySpec extends AnyFlatSpec with Matchers{
+// TESTING EQUALITY
+// note: works with all except arrays as arrays compare whether its the same instance
+
+// uses our BaseTest
+class EqualitySpec extends UnitSpec {
 
   behavior of "Currency Equals"
   it should "match two 10 USD currencies as equal when using 'should equal' syntax" in {
