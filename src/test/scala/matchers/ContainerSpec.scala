@@ -16,6 +16,18 @@ class ContainerSpec extends UnitSpec {
     wallet should contain (oneUsd)
   }
 
+  // NEGATIVE CONDITIONAL
+  it should "not contain a currency that is not  added to a List wallet" in {
+    val oneUsd: Currency = "1 USD"
+    val twoEuros: Currency = "2 EUR"
+    val tenCad: Currency = "10 CAD"
+    val tenNzd: Currency = "10 NZD"
+
+    val wallet = List(oneUsd, twoEuros, tenCad)
+
+    wallet should not contain (tenNzd)
+  }
+
   it should "contain a currency that is added to a Set wallet" in {
     val oneUsd: Currency = "1 USD"
     val twoEuros: Currency = "2 EUR"
@@ -24,6 +36,18 @@ class ContainerSpec extends UnitSpec {
     val wallet = Set(oneUsd, twoEuros, tenCad)
 
     wallet should contain (oneUsd)
+  }
+
+  // NEGATIVE CONDITIONAL
+  it should "not contain a currency that is not added to a Set wallet" in {
+    val oneUsd: Currency = "1 USD"
+    val twoEuros: Currency = "2 EUR"
+    val tenCad: Currency = "10 CAD"
+    val tenNzd: Currency = "10 NZD"
+
+    val wallet = Set(oneUsd, twoEuros, tenCad)
+
+    wallet should not contain (tenNzd)
   }
 
   it should "contain a currency that is added to a Map wallet" in {

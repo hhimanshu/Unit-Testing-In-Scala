@@ -50,4 +50,21 @@ class EqualitySpec extends UnitSpec {
     currency1 should be (currency2)
   }
 
+  // NEGATIVE CONDITIONS
+  behavior of "Currency Equals"
+  it should "not match 10 USD and 100 USD currencies as equal when using 'should be' syntax" in {
+    val tenUsd: Currency = "10 USD"
+    val hundredUsd: Currency = "100 USD"
+
+    tenUsd should not be (hundredUsd)
+  }
+
+  behavior of "Currency Equals"
+  it should "not match 10 USD and 100 USD currencies as equal when using 'should equal' syntax" in {
+    val tenUsd: Currency = "10 USD"
+    val hundredUsd: Currency = "100 USD"
+
+    tenUsd should not equal (hundredUsd)
+  }
+
 }
