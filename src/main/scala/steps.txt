@@ -1,0 +1,10 @@
+1) We made sure the project built using 'sbt "runMain BankOfScala"'
+
+2) Add 'libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % "test"' to dependencies
+
+3) create src/test/scala/*class*-test.scala
+
+4)  - Run tests in Intellij: Add config to run test; click add conf, click '+', scan for Scala test, name the config 'Tests', run all in package, select 'across all modules', use sbt, use "Unit-Testing-In-Scala" module, apply then ok, click play button
+    - Run tests in terminal: 'sbt', then 'testOnly *DollarSpec'. This is to test the suite (all tests within) 'DollarSpec'.
+    - Run all tests in terminal: 'sbt', 'test'
+
