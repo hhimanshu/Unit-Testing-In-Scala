@@ -1,0 +1,31 @@
+Adding Config setting to the "build.sbt file"
+key  separator body
+name   :=       sbt201
+
+* The types of Keys and it's purposes:
+1. SettingKey[T] - Computed Once per project load
+2. TaskKey[T] - Recomputed every time called
+3. InputKet[T] - Accepts Command-line arguments
+
+NOTES: A TASK can depend on SETTINGKey.
+       A SETTINGKey can depend on SETTINGKey.
+       BUT a SETTINGKEY cannot depend on TASKKEY.
+
+
+===============================================================
+Build.sbt file
+Adding dependency in build.sbt file:
+
+module ID :- "org.scalatest" %% "scalaTest" % "3.0.5" % Test
+             "organisation" %% "name-of-the-lib" % "reversion-of-the-lib" % Test
+        note:(it's only be added for scalaTest, bc that means this lib will only be available when running Test.)
+
+
+lazy val api=project
+  .settings(
+    libraryDependencies ++= Seq(
+      "com.lihaoyi" %% "requests" % "0.1.7",
+      "org.scala-lan.modules" %% "scala-xml" % "1.1.1",
+      "org.scalatest" %% "scalaTest" % "3.0.5" % Test
+    )
+  )
